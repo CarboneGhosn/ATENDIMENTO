@@ -1,0 +1,31 @@
+﻿Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+
+TestaArreyInt();
+
+Console.WriteLine("Pressione qualquer tecla para sair...");
+Console.ReadKey(); 
+
+void TestaArreyInt()
+{
+    int[] idades = new int[5];
+    idades[0] = 30;
+    idades[1] = 40;
+    idades[2] = 17;
+    idades[3] = 28;
+    idades[4] = 5;
+
+    Console.WriteLine($"Tamanho do Array {idades.Length}");
+
+    int acumulador = 0;
+    for (int i = 0; i < idades.Length; i++)
+    {
+        int idade = idades[i];
+        Console.WriteLine($"indice [{i}] = {idades[i]}");
+        acumulador += idade;
+    }
+    int media = acumulador / idades.Length;
+    Console.WriteLine($"Média de idades = {media}");
+
+}
+
+
