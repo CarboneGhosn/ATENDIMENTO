@@ -8,7 +8,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
 {
 	public class ListaDeContasCorrentes
 	{
-		private ContasCorrentes[] itens = null;
+		private ContaCorrente[] _itens = null;
         private int _proximaPosicao=0;
 
         public ListaDeContasCorrentes(int tamanhoInicial=5)
@@ -18,7 +18,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Util
 
         public void Adicionar(ContaCorrente item)
         {
-            Console.WriteLine($"Adicionando item na posição{_proximaPosicao}"
+            Console.WriteLine($"Adicionando item na posição{_proximaPosicao}");
             _itens[_proximaPosicao] = item;
             _proximaPosicao++;
         }

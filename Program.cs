@@ -74,7 +74,7 @@ void TestaMediana(Array array)
     if ((array == null) || (array.Length == 0))
     {
         Console.WriteLine("Array para cálculo da mediana está vazio ou nulo.");
-    }
+    };
 
     double[] numerosOrdenados = (double[])array.Clone();
     Array.Sort(numerosOrdenados);
@@ -87,20 +87,15 @@ void TestaMediana(Array array)
     Console.WriteLine($"Com base na amostra a mediana = {mediana}");
 }
 
+
 void TestaArrayDeContasCorrentes()
 {
-    ContaCorrente[] listaDeContas = new ContaCorrente[]
-    {
-        new ContaCorrente(874, "5679787-A"),
-        new ContaCorrente(874, "4456668-B"),
-        new ContaCorrente(874, "7781438-C")
-    };
+    ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrente();
+    listaDeContas.Adicionar(new ContaCorrente(874, "5679787-A"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "4456668-B"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
 
-    for (int i = 0; i < listaDeContas.Length; i++)
-    {
-        ContaCorrente contaAtual = listaDeContas[i];
-        Console.WriteLine($"Índice{i} - Conta:{contaAtual.Conta}");
-    };
+
 }
 
 TestaArrayDeContasCorrentes();
